@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class RiskJudgeService {
-    private static final Pattern POLICE_PATTERN = Pattern.compile("安全账户|转入.*账户|涉案|洗钱|保密案件|公检法");
+    private static final Pattern POLICE_PATTERN = Pattern.compile("安全账户|转入.{0,20}账户|涉案|洗钱|保密案件|公检法");
     private static final Pattern TASK_PATTERN = Pattern.compile("刷单|返利|垫付|解冻|保证金|任务单");
     private static final Pattern URGENT_PATTERN = Pattern.compile("验证码|不要告诉别人|10分钟|立即|否则影响征信|冻结");
     private static final Pattern SCREEN_PATTERN = Pattern.compile("屏幕共享|远程协助|会议软件");
